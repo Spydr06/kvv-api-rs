@@ -6,7 +6,7 @@ license = "MIT"
 description = "Rust bindings for the KVV (Karlsruher Verkehrs Verbund) \"EFA\"-API"
 readme = "README.md"
 repository = "https://github.com/spydr06/kvv-api-rs"
-keywords = ["kvv", "api", "trains", "Bahn", "Germany", "Karlsruhe"]
+keywords = ["kvv", "api", "trains", "Bahn", "Karlsruhe"]
 categories = ["api-bindings", "data-structures"]
 
 [[example]]
