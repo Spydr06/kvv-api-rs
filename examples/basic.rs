@@ -19,6 +19,7 @@ async fn main() -> Result<(), reqwest::Error> {
         // Fetch the departures of station 7000801 ("Durlach Bahnhof")
         let request = DepartureMonitorRequest::builder()
             .name(7000801)
+            .limit(4)
             .build();
 
         println!("Requesting {}...", request.url());

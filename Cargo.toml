@@ -13,6 +13,10 @@ categories = ["api-bindings", "data-structures"]
 name = "basic"
 crate-type = ["bin"]
 
+[[example]]
+name = "query-kvv-departures"
+crate-type = ["bin"]
+
 [features]
 reqwest = ["dep:reqwest"]
 
