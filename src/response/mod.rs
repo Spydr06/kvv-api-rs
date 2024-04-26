@@ -62,16 +62,16 @@ response!(pub struct Station {
     id: String,
     gid: String,
     omc: u32: encoded,
-    place_id: i32 as "placeID": encoded,
+    place_id: String as "placeID",
     place: String,
     coords: Option<String>
 });
 
 response!(pub struct Date {
-    day: i32: encoded,
-    month: i32: encoded,
-    year: i32: encoded,
-    weekday: i32: encoded
+    day: String,
+    month: String,
+    year: String,
+    weekday: String
 });
 
 response!(pub struct DateTime {
@@ -101,29 +101,29 @@ response!(pub struct LineMode {
     name: String,
     number: String,
     product: String,
-    product_id: i32 as "productId": encoded,
-    typ: i32 as "type": encoded,
+    product_id: String as "productId",
+    typ: String as "type",
     code: String,
     destination: String,
-    destination_id: i32 as "destID": encoded,
+    destination_id: String as "destID",
     desc: String,
     timetable_period: String as "timetablePeriod",
     diva: Diva
 });
 
 response!(pub struct Diva {
-    branch: i32: encoded,
+    branch: String,
     line: String,
     supplement: String,
     dir: String,
     project: String,
     network: String,
     stateless: String,
-    trip_code: i32 as "tripCode": encoded,
+    trip_code: String as "tripCode",
     operator: String,
-    op_code: i32 as "opCode": encoded,
-    v_from: i32 as "vF": encoded,
-    v_to: i32 as "vTo": encoded,
+    op_code: String as "opCode",
+    v_from: String as "vF",
+    v_to: String as "vTo",
     attrs: Vec<Parameter>
 });
 
@@ -132,13 +132,13 @@ response!(pub struct Departure {
     x: f32: encoded,
     y: f32: encoded,
     map_name: String as "mapName",
-    area: i32: encoded,
+    area: String,
     platform: String,
     platform_name: String as "platformName",
     stop_name: String as "stopName",
     name_wo: String as "nameWO",
     point_type: Option<String> as "pointType",
-    countdown: i32: encoded,
+    countdown: String,
     realtime_status: Option<String> as "realtimeStatus",
     realtime_trip_status: Option<String> as "realtimeTripStatus",
     date_time: DateTime as "dateTime",
@@ -151,20 +151,20 @@ response!(pub struct Departure {
 });
 
 response!(pub struct ServingLine {
-    key: i32: encoded,
-    code: i32: encoded,
+    key: String,
+    code: String,
     number: String,
     symbol: String,
-    mot_type: i32 as "motType": encoded,
-    mt_subcode: i32 as "mtSubcode": encoded,
-    realtime: i32: encoded,
+    mot_type: String as "motType",
+    mt_subcode: String as "mtSubcode",
+    realtime: String,
     direction: String,
     direction_from: String as "directionFrom",
     train_name: Option<String> as "trainName",
     train_number: Option<String> as "trainNum",
     name: String,
     delay: Option<String>,
-    dest_id: i32 as "destID": encoded,
+    dest_id: String as "destID",
     stateless: String
 });
 
@@ -194,7 +194,7 @@ response!(pub struct InfoText {
 });
 
 response!(pub struct AdditionalLink {
-    id: i32 as "ID": encoded,
+    id: String as "ID",
     link_url: String as "linkURL",
     link_text: String as "linkText",
     link_text_short: String as "linkTextShort",

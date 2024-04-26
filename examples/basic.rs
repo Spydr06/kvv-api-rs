@@ -5,7 +5,7 @@ async fn main() -> Result<(), reqwest::Error> {
     {
         // Search the station table for "Hauptbahnhof"
         let request = StopFinderRequest::builder()
-            .name("Hauptbahnhof")
+            .name("Bretten Bahnhof")
             .build();
 
         println!("Requesting {}...", request.url());
@@ -18,7 +18,7 @@ async fn main() -> Result<(), reqwest::Error> {
     {
         // Fetch the departures of station 7000801 ("Durlach Bahnhof")
         let request = DepartureMonitorRequest::builder()
-            .name(7000090)
+            .name(7000801)
             .build();
 
         println!("Requesting {}...", request.url());
